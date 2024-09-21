@@ -160,7 +160,7 @@ void RobotCommunicationNode::NetworkRecvThread()
     n = recvfrom(sockfd,
                  buffer_tmp.data(),
                  BUFFER_SIZE,
-                 MSG_WAITALL,
+                 MSG_WAITFORONE,
                  (struct sockaddr *)&client_addr,
                  (socklen_t *)&len);
     if (n < 0) {
